@@ -15,13 +15,14 @@ input_text = input("Enter text: ")
 completion = client.chat.completions.create(
     model=MODEL,
     messages=[
-                {
+        {
             "role": "system",
             "content": (
-                "genera 3 domande di comprensione sul testo fornito. "
-                "le risposte devono trovarsi nel testo, quindi niente domande su cose che il testo non dice"
-                "formato: elenco numerato 1., 2., 3."
-                "solo le domande, senza risposte né altro testo"
+                "Genera 3 domande di comprensione sul testo fornito. "
+                "Le risposte alle domande devono trovarsi nel testo, quindi "
+                "niente domande su informazioni che il testo non dice. "
+                "Rispondi con un elenco numerato (1., 2., 3.), solo le domande, "
+                "senza risposte né altro testo."
             ),
         },
         {"role": "user", "content": input_text},

@@ -15,13 +15,13 @@ input_text = input("Enter text: ")
 completion = client.chat.completions.create(
     model=MODEL,
     messages=[
-                {
+        {
             "role": "system",
             "content": (
-                "riassumi il testo in un unico paragarfo"
-                "massimo 255 caratteri. "
-                "tieni solo i punti essenziali (chi, cosa, dove, quando)"
-                "rispondi solo col riassunto, nient'altro"
+                "Riassumi il testo fornito in un unico paragrafo di massimo "
+                "255 caratteri, spazi inclusi. Mantieni solo i punti essenziali "
+                "(chi, cosa, dove, quando). "
+                "Rispondi solo con il riassunto, senza aggiungere altro testo."
             ),
         },
         {"role": "user", "content": input_text},
